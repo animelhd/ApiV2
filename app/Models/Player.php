@@ -68,7 +68,7 @@ class Player extends Model
      */
 	public function getLastPlayer()
 	{
-		return response()->json(['id' => 117634]);
+		return response()->json(['id' => 117650]);
 	}
 
     /**
@@ -85,7 +85,7 @@ class Player extends Model
             ->join('animes', 'animes.id', '=', 'episodes.anime_id')
             ->join('servers', 'servers.id', '=', 'players.server_id')
             ->where('players.id', '>=', $request->id_player)
-            ->where('players.id', '<=', 117476)
+            ->where('players.id', '<=', 117650)
             ->where(function ($q) {
                 $q->whereNotIn('servers.id', [3, 4])
                   ->orWhere('animes.id', '>', '1475');

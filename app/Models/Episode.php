@@ -67,7 +67,7 @@ class Episode extends Model
         return $this
             ->select('id', 'number', 'anime_id', 'created_at')
             ->where('id', '>=', $request->id_episode)
-            ->where('id', '<=', 28748)
+            ->where('id', '<=', 28780)
             ->orderBy('episodes.id', 'desc')
             ->get();
     }
