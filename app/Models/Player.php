@@ -66,15 +66,10 @@ class Player extends Model
      *
      * @return self|null
      */
-    public function getLastPlayer(): ?self
-    {
-		return $this
-			->select('id')
-			->where('id', 117476)
-			->where('server_id', 1)
-			->orderBy('id', 'desc')
-			->first();
-    }
+	public function getLastPlayer()
+	{
+		return response()->json(['id' => 117634]);
+	}
 
     /**
      * Obtiene nuevos players con condiciones específicas.
