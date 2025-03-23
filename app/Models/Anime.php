@@ -91,7 +91,7 @@ class Anime extends Model
 			])
 			->where(function ($query) use ($request) {
 				$query->whereBetween('id', [$request->id_anime, 1762])
-					->orWhereIn('id', [1482, 1496, 1514, 1517, 1566, 1568, 1575, 1576, 1588, 1649, 1577, 1580, 1582, 1583])
+					  ->orWhereIn('id', [1482, 1496, 1514, 1517, 1566, 1568, 1575, 1576, 1588, 1649, 1577, 1580, 1582, 1583]);
 			})
 			->orderBy('aired', 'desc')
 			->get();
